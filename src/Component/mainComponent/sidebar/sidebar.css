@@ -1,0 +1,54 @@
+aside {
+  flex: 1 0 250px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  position: sticky;
+  top: 15px;
+}
+h3 {
+  font-size: 18px;
+  margin: 0;
+}
+h5 {
+  text-align: center;
+  color: #555;
+  font-weight: 400;
+  font-size: 15px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 15px;
+}
+.btn-primary {
+  cursor: pointer;
+  background: #c5e09b;
+  font-size: 14px;
+  color: #000;
+  border-radius: 7px;
+  padding: 5px 15px;
+  outline: none;
+  width: 100%;
+  border: 0;
+  display: block;
+}
+.Nav-active .btn-primary,
+.btn-primary:hover {
+  background: #7cba01;
+}
+.filterBtns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.filterBtns a {
+  flex: 0 0 100px;
+  margin: 5px auto;
+}
+@media (max-width: 700px) {
+  aside {
+    position: relative;
+    top: auto;
+    margin-bottom: 20px;
+    flex: 1 0 calc(100% - 30px);
+  }
+}
