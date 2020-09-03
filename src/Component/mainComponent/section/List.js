@@ -5,23 +5,23 @@ import { withRouter } from "react-router";
 
 const List = (props) => {
   const [isLoading, setisLoading] = useState(true);
-  console.log(props.routes);
+
   const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       const requests = await axios
         .get(
-          "https://api.spaceXdata.com/v3/launches?limit=100?" +
+          "https://api.spaceXdata.com/v3/launches?limit=100&" +
             String(props.routes).toLowerCase()
         )
         .then((response) => {
           setItemList(response.data);
-          console.log(response.data);
+          // console.log(response.data);
           if (response.data.length > 0) {
             setisLoading(false);
           }
-          console.log("Date Found");
+          // console.log("Date Found");
         })
         .catch((error) => {
           console.log(error);
@@ -32,7 +32,6 @@ const List = (props) => {
 
     fetchData();
   }, [props.routes]);
-  console.log(isLoading);
   return (
     <div className="item-list-wrapper">
       {itemList.length > 0 ? (
@@ -61,7 +60,10 @@ const List = (props) => {
             </div>
             <div className="list-element">
               <label>
-                Successful Landing : <span>{String(items.launch_success)}</span>
+                Successful Landing :{" "}
+                <span>
+                  {String(items.rocket.first_stage.cores[0].land_success)}
+                </span>
               </label>
             </div>
           </div>

@@ -9,7 +9,7 @@ const MainComponent = () => {
   const setPathname = (pathname) => {
     if (!pathname == "") {
       setpathparams(pathname);
-      console.log(pathname);
+      // console.log(pathname);
     }
   };
 

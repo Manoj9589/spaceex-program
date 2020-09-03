@@ -30,20 +30,19 @@ h5 {
   width: 100%;
   border: 0;
   display: block;
+  flex: 0 0 calc(50% - 20px);
+  margin: 5px 10px;
 }
-.Nav-active .btn-primary,
+.btn-primary.active,
 .btn-primary:hover {
   background: #7cba01;
 }
 .filterBtns {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
-.filterBtns a {
-  flex: 0 0 100px;
-  margin: 5px auto;
-}
+
 @media (max-width: 700px) {
   aside {
     position: relative;
