@@ -43,7 +43,7 @@ const Sidebar = (props) => {
     } else {
       setIsActive({ ...isActive, activeYearBtnId: "launch_year_" + year });
     }
-    let fUrl = "http://spaceex-app.herokuapp.com";
+    let fUrl = "http://localhost:3000";
     let newUrl = locationPath.split(fUrl);
     console.log(newUrl[1]);
     let matches = locationPath.match(/[a-z\d]+=[a-z\d]+/gi);
@@ -87,7 +87,7 @@ const Sidebar = (props) => {
   };
   // on click launch success filter
   const handleSuccessfulLaunch = (bool) => {
-    let fUrl = "http://spaceex-app.herokuapp.com";
+    let fUrl = "http://localhost:3000";
     let url = new URL(locationPath);
     let r = /\d+/;
     let matches = locationPath.match(/[a-z\d]+=[a-z\d]+/gi);
@@ -150,7 +150,7 @@ const Sidebar = (props) => {
       });
     }
     console.log(isActive);
-    let fUrl = "http://spaceex-app.herokuapp.com";
+    let fUrl = "http://localhost:3000";
     let newUrl = locationPath.split(fUrl);
     let url = new URL(locationPath);
     let r = /\d+/;
