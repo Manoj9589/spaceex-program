@@ -1,3 +1,4 @@
+// Main Component
 import React, { useState } from "react";
 import Sidebar from "./sidebar/Sidebar";
 import ListContent from "./section/ListContent";
