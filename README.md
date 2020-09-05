@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## This is SpaceEx Launch program React App
 Please Install the node modules
 
-npm install
+## npm install
 
 ## Available Scripts
 
